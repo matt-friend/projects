@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{article}
+\title{Notes on Machine learning}
+\author{Matthew}
+\date{today}
+\maketitle
+
+\begin{document}
+
+\section{Basics - Neural Networks}
+
+Cost function C: $$C(w,b)=\frac{1}{2n}\sum_x||y(x)-a||^2$$
+
+\noindent Change in C is modelled approximately by: $$\Delta C\approx \frac{\delta C}{\delta v_1}\Delta v_1+\frac{\delta C}{\delta v_2}\Delta v_2$$
+
+\noindent The gradient vector of C is equivalent to: $$\nabla C\equiv \left(\frac{\delta C}{\delta v_1},\frac{\delta C}{\delta v_2}\right)^T$$
+
+\noindent Therefore a change in C can be approximated by $\Delta C\approx \nabla C \cdot \Delta v$. As we are trying to minimise the cost value of C, we can fix $\Delta v$ to a value that ensures $\Delta C$ will always be negative: $$\Delta v=-\eta \nabla C$$ Where $\eta$ is a small positive value known as the learning rate.
+
+\noindent This means that:
+\begin{eqnarray*}
+	\Delta C & = & \nabla C\cdot \Delta v \\
+	& = & \nabla C \cdot -\eta \nabla C \\
+	& = & -\eta || \nabla C ||^2
+\end{eqnarray*}
+
+i.e. the change in C can always be negative, towards the local minima. The speed of gradient descent is now:$$v \rightarrow v'=v-\eta \nabla C$$
+
+\end{document}
+
+
