@@ -1,0 +1,9 @@
+class Network(object):
+    
+    #sizes is going to be an array containing the number of nodes in each layer respectively
+    def _init_(self, sizes):
+        self.num_layers = len(sizes)
+        self.sizes = sizes
+        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]
+        self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]
+
