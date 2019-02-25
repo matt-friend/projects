@@ -10,6 +10,8 @@
 
 \section{Basics - Neural Networks}
 
+\subsection{Math of neural networks}
+
 The cost of a neural network is effectively how wrong its output is from the desired output. The cost function can be calculated in a number of ways, but one of the most common is a variation of the mean square error: $$C(w,b)=\frac{1}{2n}\sum_x||y(x)-a||^2$$
 
 \noindent Change in C, where C is a function of multiple variables (in this example equation, just two variables v1 and v2, but there can be an unlimited amount) is modelled approximately by: $$\Delta C\approx \frac{\delta C}{\delta v_1}\Delta v_1+\frac{\delta C}{\delta v_2}\Delta v_2$$
@@ -36,6 +38,11 @@ One of the challenges faced by gradient descent is time. One aspect of this is t
 To solve this problem, an approach called \textit{stochastic gradient descent} can be used. In this process, a random \textit{mini-batch} of training examples are selected and used to calculate the gradient. If the examples (say a count of \textit{m} from \textit{x|} in the total training set) then it can be a good approximation for the set calculated in a much shorter time. Provided this sample size is large enough:$$\frac{\sum_{j=1}^m \nabla C_{X_j}}{m} \approx \frac{\sum_x \nabla C_x}{n}=\nabla C$$ where the second sum is the sum over all training data.
 
 This approach can be applied to the neural network for changing the values of the weights and biases based on a small random batch. The network is trained on these mini-batches one at a time until the training set is exhausted (concluding an \textit{epoch} of training), then we start again.
+
+\subsection{Implementing in python}
+Weights and biases are initialsed using a Gaussian distirbution random number generator in numpy, into arrays of the correct size. Biases are initialised an array of one-dimensional arrays (only bias needed per node, and none for the input layer), and weights are initialsed into an array of 2-d arrays based on the number of nodes in adjacent layers. The notation for the weights matrices is that the \texttt{net.weights[n]} matrix (if we denote it $w$) contains values $w_{jk}$ such that they are the weight for the connection between the $k^{th}$ neuron in the $n+1^{th}$ layer and the $j^{th}$ neuron in the $n^{th}$ layer.
+
+The advantage of this notation is that the vector of activations of the nth layer of neurons is: $$a_n = \sigma (wa_{n-1}+b)$$ This equation computes the activation of a layer based on a combination of the previous layer's activations, the weights connecting the two layers and the biases of the layer being calculated. The $\sigma$ function is then applied to each of the calculated activation values (\textit{vectorizing} the function $\sigma$).
 
 \end{document}
 
