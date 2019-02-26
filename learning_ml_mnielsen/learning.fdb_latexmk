@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1551115756 "learning.tex" "learning.pdf" "learning" 1551115756
+["pdflatex"] 1551224243 "learning.tex" "learning.pdf" "learning" 1551224243
   "/etc/texmf/web2c/texmf.cnf" 1550957403 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1480098701 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -32,9 +32,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1550957410 75955 f78456fd1308dc295dc476a68e28d85b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550957412 724918 78fcc0a2ca012b815f8c3a3287db6515 ""
-  "learning.aux" 1551115756 273 7aec5b70a8f5573c2e39fc2243e0c34c ""
-  "learning.tex" 1551115755 5022 35fe91641e7df33ed50d7f7ead84cc23 ""
+  "learning.aux" 1551224243 273 7aec5b70a8f5573c2e39fc2243e0c34c ""
+  "learning.tex" 1551224243 5043 6faca7e93fb1b80307d0a29f9420122c ""
   (generated)
-  "learning.aux"
   "learning.log"
+  "learning.aux"
   "learning.pdf"
