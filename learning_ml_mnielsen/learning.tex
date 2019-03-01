@@ -44,6 +44,33 @@ Weights and biases are initialised using a Gaussian distribution random number g
 
 The advantage of this notation is that the vector of activations of the nth layer of neurons is: $$a_n = \sigma (wa_{n-1}+b)$$ This equation computes the activation of a layer based on a combination of the previous layer's activations, the weights connecting the two layers and the biases of the layer being calculated. The $\sigma$ function is then applied to each of the calculated activation values (\textit{vectorizing} the function $\sigma$).
 
+\section{Backpropagation}
+
+\subsection{Computing the output from a neural network}
+Before learning about backpropagation, need to compute output quickly from the network. This is done using matrices. 
+
+Need an unambiguous way to refer to the nodes and connections in the network (i.e the weights and biases). We will do this with the notation $w^l_{jk}$ to denote the weight of the connection between the $j^{th}$ neuron of the $l^{th}$ layer and the $k^{th}$ neuron in the $(l-1)^{th}$ layer. Remember, the reason for the ordering of the $j$ and $k$ indices is to aid with the matrix computations, despite their order being counterintuitive with the input neuron second.
+
+A similar notation is used for the bias notation, $b^l_j$ for the bias of the $j^{th}$ neuron in the $l^{th}$ layer. And the same for activation, $a^l_j$ for the activation of the $j^{th}$ neuron in the $l^{th}$ layer.
+
+With this notation, the relation of the activation of the $j^{th}$ neuron in the $l^{th}$ layer, $a^l_j$, is computed from activations in the $(l-1)^{th}$ layer by the equation $$a^l_j=\sigma(\sum_k w^l_{jk}a^{l-1}_k+b^l_j)$$ where the sum is over all neurons $k$ in the $(l-1)^{th}$ layer.
+
+To rewrite this expression in matrix form we define a weight matrix $w^l$ for each layer $l$. The entries in $w^l$ are just the weights of the connections to the $l^{th}$ layer of neurons. Similarly we define a bias vector $b^l$ for each layer of neurons, and an activation vector $a^l$.
+
+With these notations in mind we can rewrite the activation function as $$a^l=\sigma (w^la^{l-1}+b^l)$$ which is a much simpler way of displaying the function and helps us relate the entire layer to the previous weights, biases and activations.
+
+The computed value $$w^la^{l-1}+b^l$$ is used often enough to assign it the notation $z^l$ such that $$a^l=\sigma (z^l)$$ This is known as the weighted input to the layer $l$. Also note that the components of $z^l$ are $$z^l_j=\sum_kw^l_{jk}a^{l-1}_k+b^l_j$$ such that $z^l_j$ is the weighted input to the activation function in layer $l$ of neuron $j$
+
+\subsection{Assumptions about the cost function}
+\begin{enumerate}
+	\item Cost function can be written as an average $C = \frac{1}{n}\sum_xC_x$ over cost function $C_x$ for individual training examples $x$. This assumption holds for both the quadratic cost function we use and all other cost functions.
+		This lets us compute the partial derivative $\frac{\delta C}{\delta w}$ and $\frac{\delta C}{\delta w}$ by averaging over all the training examples, where the partial derivatives are computed by the backpropagation algorithm.
+	\item The Cost can be written as a function of the outputs from the neural network. This assumption is held by the quadratic cost function, with the cost being determined by the sum of the square of the differences in the output activations and the desired output. Although it could be said that the cost is also a function of the desired output $y$, it makes more sense to say that $C$ is merely a function of the outputs alone as $y$ is fixed parameter that helps define the function.
+\end{enumerate}
+
+\subsection{The Hadamard product, s $\bigodot$ t}
+An uncommon linear function is the \textit{elementwise} product of two vectors of the same dimension. This is denoted by $s\bigodot t$ where the components of the operation are $(s \bigodot t)_j=s_jt_j$. For example: $$\left[ \begin{array}{c}1\\2\end{array} \right] \bigodot \left[ \begin{array}{c}3\\4\end{array} \right] = \left[ \begin{array}{c}3\\8\end{array} \right] $$ This is often reffered to as the Hadamard Product.
+
 \end{document}
 
 
