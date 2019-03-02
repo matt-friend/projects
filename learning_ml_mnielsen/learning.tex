@@ -64,13 +64,18 @@ The computed value $$w^la^{l-1}+b^l$$ is used often enough to assign it the nota
 \subsection{Assumptions about the cost function}
 \begin{enumerate}
 	\item Cost function can be written as an average $C = \frac{1}{n}\sum_xC_x$ over cost function $C_x$ for individual training examples $x$. This assumption holds for both the quadratic cost function we use and all other cost functions.
-		This lets us compute the partial derivative $\frac{\delta C}{\delta w}$ and $\frac{\delta C}{\delta w}$ by averaging over all the training examples, where the partial derivatives are computed by the backpropagation algorithm.
+		This lets us compute the partial derivative $\partial C/\partial w$ and $\partial C/\partial w$ by averaging over all the training examples, where the partial derivatives are computed by the backpropagation algorithm.
 	\item The Cost can be written as a function of the outputs from the neural network. This assumption is held by the quadratic cost function, with the cost being determined by the sum of the square of the differences in the output activations and the desired output. Although it could be said that the cost is also a function of the desired output $y$, it makes more sense to say that $C$ is merely a function of the outputs alone as $y$ is fixed parameter that helps define the function.
 \end{enumerate}
 
-\subsection{The Hadamard product, s $\bigodot$ t}
-An uncommon linear function is the \textit{elementwise} product of two vectors of the same dimension. This is denoted by $s\bigodot t$ where the components of the operation are $(s \bigodot t)_j=s_jt_j$. For example: $$\left[ \begin{array}{c}1\\2\end{array} \right] \bigodot \left[ \begin{array}{c}3\\4\end{array} \right] = \left[ \begin{array}{c}3\\8\end{array} \right] $$ This is often reffered to as the Hadamard Product.
+\subsection{The Hadamard product, s $\odot$ t}
+An uncommon linear function is the \textit{elementwise} product of two vectors of the same dimension. This is denoted by $s\odot t$ where the components of the operation are $(s \odot t)_j=s_jt_j$. For example: $$\left[ \begin{array}{c}1\\2\end{array} \right] \odot \left[ \begin{array}{c}3\\4\end{array} \right] = \left[ \begin{array}{c}3\\8\end{array} \right] $$ This is often reffered to as the Hadamard Product.
 
+\subsection{The four fundamental equations of backpropagation}
+Backpropagation is about understanding how changing the weights and biases in a network affect the output and therfore the cost function. Thid will ultimately involve calculating the parial derivatives $\partial C/\partial w^l_{jk}$ and $\partial C/\partial b^l_j$. To compute these we will need an intermediate value. This will be $\delta^l_j$, or the \textit{error} in the $j^{th}$ neuron of the $l^{th}$ layer. Backpropagation will give us a way to calculate this value and relate it to our partial derivatives
+\begin{itemize}
+	\item 
+\end{itemize}
 \end{document}
 
 

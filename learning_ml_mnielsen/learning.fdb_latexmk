@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1551401676 "learning.tex" "learning.pdf" "learning" 1551401676
+["pdflatex"] 1551451071 "learning.tex" "learning.pdf" "learning" 1551451071
   "/etc/texmf/web2c/texmf.cnf" 1550957403 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1480098701 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -27,14 +27,15 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1480098733 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1480098733 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1480098821 19821 310da678527a7dfe2a02c88af38079b7 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd" 1480098821 2256 80ce1168fb4ce6a85583a9cf8972c013 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo" 1480098821 8303 1d67e16498f00f63da792fab169302fc ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1550957410 75955 f78456fd1308dc295dc476a68e28d85b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550957412 724918 78fcc0a2ca012b815f8c3a3287db6515 ""
-  "learning.aux" 1551401676 665 e1708302965fa6b377142ea57a6eee47 ""
-  "learning.tex" 1551401676 8628 b1dd01216b1f742e8fb79dbaa02b40f4 ""
+  "learning.aux" 1551451071 778 784c6c28b09eb054df9da51b4269d385 ""
+  "learning.tex" 1551451071 9223 e99426af33838443ba89649132c2c3d6 ""
   (generated)
-  "learning.aux"
-  "learning.pdf"
   "learning.log"
+  "learning.pdf"
+  "learning.aux"
